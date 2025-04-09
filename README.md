@@ -4,3 +4,7 @@
 * Java 11.
 * JUnit 4.
 * Eclipse IDE.
+
+## Contenido
+* Como aplicar TDD.
+* Pruebas de código con carta.
