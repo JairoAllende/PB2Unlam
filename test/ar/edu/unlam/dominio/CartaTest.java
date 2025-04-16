@@ -50,7 +50,7 @@ public class CartaTest {
 		Carta carta = new Carta();
 		
 		// Ejecucion
-		carta.recibirDanio(120);
+		carta.recibirDanio(100);
 		
 		// Verificacion
 		int saludEsperada = 0; 
