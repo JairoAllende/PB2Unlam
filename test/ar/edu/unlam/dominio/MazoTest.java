@@ -95,6 +95,8 @@ public class MazoTest {
 		carta.setNumero(1);
 		
 		Carta cartaDos = new Carta();
+		
+		System.out.println(carta);
 		cartaDos.setNumero(1);
 		cartaDos.recibirDanio(10);
 		
