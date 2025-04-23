@@ -3,7 +3,7 @@ package ar.edu.unlam.dominio;
 public class Circulo extends Figura{
 	
 	private Integer radio;
-	private final Double pi = 3.1416;
+	private final Double PI = 3.1416;
 	
 	public Circulo(int radio) {
 		super();
@@ -12,7 +12,7 @@ public class Circulo extends Figura{
 	
 	@Override
 	public Double calcularPerimetroCirculo() {
-		return 2 * (pi) * (this.radio);
+		return 2 * (PI) * (this.radio);
 	}
 	
 	

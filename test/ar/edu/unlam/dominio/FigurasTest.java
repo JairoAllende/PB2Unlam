@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class FigurasTest {
 	
+	
 	@Test
 	public void dadoQueExisteUnRectanguloSePuedeCalcularElPerimetro() {
 		Rectangulo rectangulo1 = new Rectangulo(10, 20);
