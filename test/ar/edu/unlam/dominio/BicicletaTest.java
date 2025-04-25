@@ -17,7 +17,6 @@ public class BicicletaTest {
 		this.bicicleta = new Bicicleta();
 	}
 
-	
 	@Test
 	public void dadoQueExisteUnaBicicletaCuandoLeCargoUnVolumenSoportadoElResultadoEsPositivo() {
 		

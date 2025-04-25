@@ -4,8 +4,6 @@ import java.util.HashSet;
 
 public class Bicicleta extends MedioDeTransporte{
 	
-	private HashSet<Destino> destinos = new HashSet<>();
-	
 	public Bicicleta() {
 		super(0.125, 15.0);
 	}
@@ -37,15 +35,7 @@ public class Bicicleta extends MedioDeTransporte{
 		
 	}
 
-	public Destino getDestino(String ciudad, String direccion) {
-		Destino destinoBuscado = null;
-		
-		if(this.destinos.contains(new Destino(ciudad, direccion))) {
-			return destinoBuscado = new Destino(ciudad, direccion);
-		}
-		
-		return destinoBuscado;
-	}
+	
 
 	public HashSet<Destino> getDestinos() {
 		return destinos;
