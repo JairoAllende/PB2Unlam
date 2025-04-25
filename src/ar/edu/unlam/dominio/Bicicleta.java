@@ -20,6 +20,7 @@ public class Bicicleta extends MedioDeTransporte{
 
 	    return paqueteCargado;
 	}
+	
 
 	public void indicarDestino(String ciudad, String direccion) {
 		Boolean ciudadIndicada = false;
