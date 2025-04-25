@@ -25,8 +25,7 @@ public class BicicletaTest {
 		
 		Boolean paquete1Cargado = this.bicicleta.cargarPaquete(paquete1);
 		
-		assertTrue(paquete1Cargado);	
-		
+		assertTrue(paquete1Cargado);
 	}
 	
 	@Test
@@ -64,7 +63,7 @@ public class BicicletaTest {
 		
 		this.bicicleta.indicarDestino("San Justo", "Florencio Varela 1903");
 		
-		Destino destinoIndicado = this.bicicleta.getDestino();
+		Destino destinoIndicado = this.bicicleta.getDestino("San Justo", "Florencio Varela 1903");
 		Destino destinoEsperado = new Destino("San Justo", "Florencio Varela 1903");
 		
 		assertEquals(destinoEsperado, destinoIndicado);
@@ -81,11 +80,36 @@ public class BicicletaTest {
 		
 		Destino destinoEsperado = new Destino("Ramos Mejia", "Av. Rivadavia 13000");
 		
-		assertEquals(destinoEsperado, this.bicicleta.getDestino());
+		assertEquals(destinoEsperado, this.bicicleta.getDestino("Ramos Mejia", "Av. Rivadavia 13000"));
 		
 	}
 	
-	//Falta el test de moverse en una unica ciudad
+	@Test
+	public void dadoQueExisteUnaBicicletaAlIndicarleDestinosEnCiudadesDiferentesSoloSeLeGuardaUno() {
+		
+		this.bicicleta.indicarDestino("San Justo", "Florencio Varela 1903");
+		this.bicicleta.indicarDestino("Ramos Mejía", "Florencio Varela 1903");
+		
+		Integer cantidadDeDestinosCargados = this.bicicleta.getDestinos().size();
+		Integer cantidadDeDestinosEsperados = 1;
+		
+		assertEquals(cantidadDeDestinosEsperados, cantidadDeDestinosCargados);
+	}
+	
+	@Test
+	public void dadoQueExisteUnaBicicletaAlIndicarleDiferentesDestinosEnUnaMismaCiudadElResultadoEsPositivo() {
+		
+		this.bicicleta.indicarDestino("San Justo", "Florencio Varela 1903");
+		this.bicicleta.indicarDestino("San Justo", "Rincon 123");
+		this.bicicleta.indicarDestino("San Justo", "Rincon 456");
+		
+		System.out.println(this.bicicleta.getDestinos());
+		
+		Integer cantidadDeDestinosCargados = this.bicicleta.getDestinos().size();
+		Integer cantidadDeDestinosEsperados = 3;
+		
+		assertEquals(cantidadDeDestinosEsperados, cantidadDeDestinosCargados);
+	}
 	
 	
 }

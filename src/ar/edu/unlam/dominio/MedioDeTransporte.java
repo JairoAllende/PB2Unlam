@@ -7,7 +7,6 @@ public class MedioDeTransporte {
 	protected ArrayList<Paquete> paquetes = new ArrayList<>();
 	protected Double capacidadVolumenMaximo;
 	protected Double capacidadPesoMaximo;
-	protected Destino destino;
 	
 	public MedioDeTransporte(Double capacidadVolumenMaximo, Double capacidadPesoMaximo) {
 		this.capacidadVolumenMaximo = capacidadVolumenMaximo;
@@ -26,15 +25,6 @@ public class MedioDeTransporte {
 		}
 		
 		return paqueteCargado;
-	}
-	
-	
-	public void indicarDestino(String ciudad, String direccion) {
-		destino = new Destino(ciudad, direccion);
-	}
-
-	public Destino getDestino() {
-		return destino;
 	}	
 	
 }
