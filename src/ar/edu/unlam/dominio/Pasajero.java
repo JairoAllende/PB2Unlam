@@ -17,5 +17,6 @@ public class Pasajero {
 	public Double getPeso() {
 		return this.peso;
 	}
-
+	
+	
 }
