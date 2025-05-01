@@ -29,4 +29,6 @@ public class PasajeroTest {
 		
 		assertEquals(pesoPasajeroEsperado, pesoPasajero1);
 	}
+	
+	
 }
