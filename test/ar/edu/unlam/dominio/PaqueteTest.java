@@ -34,7 +34,7 @@ public class PaqueteTest {
 		Paquete paquete1 = new Paquete("P-01",0.7,1.0,0.5,6.0,"Florencio Varela 1903");
 		
 		String destinoPaquete1 = paquete1.getDireccion();
-		String destinoEsperado = "San Justo";
+		String destinoEsperado = "Florencio Varela 1903";
 		
 		assertEquals(destinoEsperado, destinoPaquete1);
 	}

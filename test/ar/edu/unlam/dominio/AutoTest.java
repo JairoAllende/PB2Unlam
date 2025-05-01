@@ -76,7 +76,7 @@ public class AutoTest {
 	}
 	
 	@Test
-	public void dadoQueExisteUnAutoCuandoSeLeIndicaElDestinoMasDeUnaVezSoloSeGuardaUnaVez() {
+	public void dadoQueExisteUnAutoCuandoSeLeIndicaElMismoDestinoMasDeUnaVezSoloSeGuardaUnaVez() {
 		this.auto.indicarDestino("Ciudadela", "Saavedra 3400");
 		this.auto.indicarDestino("Moron", "Rivadavia 3000");
 		this.auto.indicarDestino("Ciudadela", "Saavedra 3400");

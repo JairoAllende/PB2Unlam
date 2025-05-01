@@ -35,8 +35,6 @@ public class Bicicleta extends MedioDeTransporte{
 		
 	}
 
-	
-
 	public HashSet<Destino> getDestinos() {
 		return destinos;
 	}

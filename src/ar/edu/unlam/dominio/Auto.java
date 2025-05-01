@@ -13,29 +13,20 @@ public class Auto extends MedioDeTransporte{
 	@Override
 	public void indicarDestino(String ciudad, String direccion) {
 		Integer contador = 1;
-		Boolean mismaDireccion = false;
 		
 		for (Destino destino : destinos) {
 			if(!destino.getCiudad().equals(ciudad)) {
 				contador++;
 			}
-			
-			if(destino.getDireccion().equals(direccion)) {
-				mismaDireccion = true;
-			}
 		}
 		
 		if(this.destinos.isEmpty() || contador <= MAXIMO_DE_CIUDADES) {
-			if(mismaDireccion == false) {
-				this.destinos.add(new Destino(ciudad, direccion));
-			}
+			this.destinos.add(new Destino(ciudad, direccion));
 			
 		}
-		
 	}
 	
 	
-
 	public HashSet<Destino> getDestinos() {
 		return destinos;
 	}
