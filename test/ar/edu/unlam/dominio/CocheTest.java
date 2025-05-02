@@ -12,21 +12,21 @@ public class CocheTest {
 	
 	@Before
 	public void init() {
-		this.coche = new Coche("AUT-001", 4800d, 60);
+		this.coche = new Coche("AUT-001", 2000d, 5);
 	}
 	
 	@Test
 	public void dadoQueExisteUnCocheAlConsultarSuPatenteObtengoUnResultadoPositivo() {
-		String patenteColectivo = this.coche.getPatente();
-		String patenteEsperada = "PDJ-048";
+		String patenteCoche = this.coche.getPatente();
+		String patenteEsperada = "AUT-001";
 		
-		assertEquals(patenteColectivo, patenteEsperada);
+		assertEquals(patenteCoche, patenteEsperada);
 	}
 	
 	@Test
 	public void dadoQueExisteUnCocheAlConsultarSuCapacidadDePesoMaximoObtengoUnResultadoPositivo() {
 		Double pesoMaximoSoportado = this.coche.obtenerPesoMaximo();
-		Double pesoMaximoEsperado = 4800d;
+		Double pesoMaximoEsperado = 2000d;
 		
 		assertEquals(pesoMaximoSoportado, pesoMaximoEsperado);
 	}
@@ -34,7 +34,7 @@ public class CocheTest {
 	@Test
 	public void dadoQueExisteUnCocheAlConsultarSuCapacidadMaximaDePasajerosObtengoUnResultadoPositivo() {
 		Integer capacidadMaxima = this.coche.obtenerCapacidadMaximaDePasajeros();
-		Integer capacidadMaximaEsperada = 60;
+		Integer capacidadMaximaEsperada = 5;
 		
 		assertEquals(capacidadMaxima, capacidadMaximaEsperada);
 	}
