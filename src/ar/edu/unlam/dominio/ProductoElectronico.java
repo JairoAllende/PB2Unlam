@@ -11,5 +11,4 @@ public class ProductoElectronico extends Producto{
 		return this.precio * 1.15;
 	}
 	
-	
 }
