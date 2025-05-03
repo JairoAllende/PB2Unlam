@@ -1,6 +1,6 @@
 package ar.edu.unlam.dominio;
 
-public class Producto {
+public abstract class Producto {
 	
 	protected String nombre;
 	protected Double precio;
@@ -12,9 +12,7 @@ public class Producto {
 		this.descripcion = descripcion;
 	}
 	
-	public Double calcularPrecioFinal() {
-		return null;
-	}
+	public abstract Double calcularPrecioFinal();
 
 	public String getNombre() {
 		return nombre;
