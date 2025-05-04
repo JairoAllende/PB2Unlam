@@ -32,9 +32,17 @@ public class ProductoPerecederoTest {
 	
 	@Test
 	public void dadoQueExisteUnProductoPerecederoAlconsultarElPrecioUnitarioBaseObtengoUnResultadoPositivo() {
-		Double precioUnitarioObtenido = this.productoPerecedero.getPrecioUnitario();
-		Double precioUnitarioEsperado = 2000d;
+		Double precioUnitarioBaseObtenido = this.productoPerecedero.getPrecioUnitario();
+		Double precioUnitarioBaseEsperado = 2000d;
 		
-		assertEquals(precioUnitarioObtenido, precioUnitarioEsperado);
+		assertEquals(precioUnitarioBaseObtenido, precioUnitarioBaseEsperado);
+	}
+	
+	@Test
+	public void dadoQueExisteUnProductoPerecederoAlconsultarElPrecioUnitarioTotalObtengoUnResultadoPositivo() {
+		Double precioUnitarioTotalObtenido = this.productoPerecedero.obtenerPrecio();
+		Double precioUnitarioTotalEsperado = 2100d;
+		
+		assertEquals(precioUnitarioTotalObtenido, precioUnitarioTotalEsperado);
 	}
 }
