@@ -19,6 +19,6 @@ public class MercadoPagoTest {
 		Double montoTotal = this.mercadoPago.procesarPago(1000d);
 		Double montoEsperado = 1120d;
 		
-		assertEquals(montoTotal, montoEsperado);
+		assertEquals(montoEsperado, montoTotal);
 	}
 }
