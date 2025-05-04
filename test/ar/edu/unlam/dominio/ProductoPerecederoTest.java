@@ -31,7 +31,7 @@ public class ProductoPerecederoTest {
 	}
 	
 	@Test
-	public void dadoQueExisteUnProductoPerecederoAlconsultarElPrecioUnitarioObtengoUnResultadoPositivo() {
+	public void dadoQueExisteUnProductoPerecederoAlconsultarElPrecioUnitarioBaseObtengoUnResultadoPositivo() {
 		Double precioUnitarioObtenido = this.productoPerecedero.getPrecioUnitario();
 		Double precioUnitarioEsperado = 2000d;
 		
